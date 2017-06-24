@@ -1,0 +1,63 @@
+<div id="contactme" class="row part">
+    <div class="col-md-offset-1 col-md-10 col-sm-12">
+        <h1 class="text-center padding-top-standard">Contact me !</h1>
+        <form id="contact_form" class="form-horizontal" action="{{ url_for('main.index') }}" method=post>       
+            {{ form.hidden_tag() }}      
+                               
+            {# begin form userName #} 
+            <div id="user_name" class="row form-group">
+                {{ form.userName.label(class="col-sm-offset-1 col-sm-3 col-xs-12") }}               
+		        <div class="col-sm-7 col-xs-12">
+	            	{% for message in form.userName.errors %}
+		        		<div class="flash">{{ message }}</div>
+		        	{% endfor %}
+	            	{{ form.userName(class="form-control", placeholder="Name") }}
+	            </div>
+            </div>
+            {# end form userName #}
+            
+            {# begin form userEmail #}
+            <div id="user_email" class="row form-group">
+                {{ form.userEmail.label(class="col-sm-offset-1 col-sm-3 col-xs-12") }}
+		        <div class="col-sm-7 col-xs-12">
+	            	{% for message in form.userEmail.errors %}
+			        	<div class="flash">{{ message }}</div>
+		        	{% endfor %}		        
+	            	{{ form.userEmail(class="form-control", placeholder="E-mail") }}
+	            </div>
+            </div>
+            {# enf form userEmail #}             
+           
+            {# begin form msgSubject #}
+            <div id="msg_subject" class="row form-group">
+                {{ form.msgSubject.label(class="col-sm-offset-1 col-sm-3 col-xs-12") }}
+		        <div class="col-sm-7 col-xs-12">
+	            	{% for message in form.msgSubject.errors %}
+			        <div class="flash">{{ message }}</div>
+		        	{% endfor %}		            
+	            	{{ form.msgSubject(class="form-control", placeholder="Subject") }}
+	            </div>
+            </div>
+            {# enf form msgSubject #} 
+            
+            {# begin form msgText #}
+            <div id="msg_text" class="row form-group">
+		        <div class="col-sm-offset-1 col-sm-10 col-xs-12">
+		        	{% for message in form.msgText.errors %}
+			        	<div class="flash">{{ message }}</div>
+		            {% endfor %}
+	            	{{ form.msgText(class="form-control", placeholder="Message Text", rows="5") }}
+	            </div>
+            </div>
+            {# enf form msgText #} 
+            
+            <div id="form_buttons" class="row">
+                <div class="col-xs-11">
+                    <button id="btn_submit" type="submit" class="btn btn-default btn_form_customized pull-right">Submit</button>
+                    <button id="btn_reset" type="reset" class="btn btn-default btn_form_customized pull-right">Reset</button>
+                </div>
+            </div>            
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+{% extends "base/base.html" %}
+{% block title %}www.ElleJourney.com{% endblock title %}
+
+{% block header %}
+   {% include "base/page_components/header.html" %}
+{% endblock header %}
+
+{% block content %} 
+   <div class="col-md-offset-1 col-md-10 col-sm-12 myborder">
+   {% block info %}{% endblock info %}
+   </div>
+{% endblock content %}
+
+{% block footer %}
+   {% include "base/page_components/footer.html" %}
+{% endblock footer %}

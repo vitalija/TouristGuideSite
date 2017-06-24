@@ -1,0 +1,25 @@
+{% extends "base/base.html" %}
+
+{% block title %}www.ElleJourney.com{% endblock title %}
+
+{% block header %}
+   {% include "base/page_components/header.html" %}
+{% endblock header %}
+
+{% block content %}
+    {# content: slideshow #}
+    {% include "base/page_components/content-slideshow.html" %}
+    
+    {# content: aboutme #}
+    {% include "base/page_components/content-aboutme.html" %}
+    
+    {# content: tours #}
+    {% include "base/page_components/content-tours.html" %}
+    
+    {# content: contactme #}
+    {% include "base/page_components/content-contact-form.html" %}
+{% endblock content %}
+
+{% block footer %}
+   {% include "base/page_components/footer.html" %}
+{% endblock footer %}
