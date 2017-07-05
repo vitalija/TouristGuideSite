@@ -5,6 +5,11 @@ from .forms import ContactForm
 from . import main
 
 
+@main.route('/tours/<region>/<destination>') 
+def tours(region, destination):
+    location ='base/tours/' + region + "/" + destination + ".html"
+    return render_template('tour_description.html', location = location)
+
 @main.route('/', methods=['GET', 'POST'])
 @main.route('/index', methods=['GET', 'POST'])
 def index():

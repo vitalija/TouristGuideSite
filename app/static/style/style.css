@@ -31,6 +31,22 @@ body {
     text-justify: inter-word;
 }
 
+.inline-navigator {
+	margin-top: -40px;
+	margin-bottom: 40px;
+}
+
+.inline-navigator a {
+	font-size: 1.2em;
+	color: #35777b;
+	margin-right: 30px;
+	text-decoration: underline;
+}
+
+.inline-navigator a:visited {
+    border: none;
+}
+
 .padding-top-standard {
     padding-top: 160px;
 }

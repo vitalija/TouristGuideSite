@@ -4,4 +4,4 @@ my_app = create_app('production')
 
 
 if __name__ == '__main__':
-    my_app.run(debug=False)
+    my_app.run(debug=True)

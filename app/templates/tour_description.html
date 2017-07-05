@@ -1,0 +1,21 @@
+{% extends "base/base.html" %}
+
+{% block header %}
+   {% include "base/page_components/header_without_logo.html" %}
+{% endblock header %}
+
+{% block content %}
+<div class = "inline-navigator">
+    <a href="/index#liguria-heading">Liguria Tours</a>
+    <a href="/index#riviera-heading">Riviera Tours</a>
+</div>
+<div class="row part tour_description ">
+    <div class="col-md-offset-1 col-md-10 col-sm-12 myborder">
+    	{% include location %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block footer %}
+   {% include "base/page_components/footer.html" %}
+{% endblock footer %} 
